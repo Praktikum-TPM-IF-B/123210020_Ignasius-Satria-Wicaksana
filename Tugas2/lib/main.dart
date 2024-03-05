@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Login'),
     );
   }
 }
@@ -106,20 +106,33 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'LOGIN'
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            const Text(
+              ''
+            ),
+            const TextField(
+              decoration: InputDecoration(
+                  hintText: 'Username',
+                  border: OutlineInputBorder()
+              ),
+            ),
+            const Text(
+              '',
+            ),
+            const TextField(
+              decoration: InputDecoration(
+                  hintText: 'Password',
+                  border: OutlineInputBorder()
+              ),
+            ),
+            const Text(''
+            ),
+            ElevatedButton(onPressed: _incrementCounter, child: Text('LOGIN')
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
